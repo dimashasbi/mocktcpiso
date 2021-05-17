@@ -1,0 +1,62 @@
+{
+    "console": {
+        "enable": false,
+        "level": "FINE"
+    },
+    "files": [
+        {
+            "enable": true,
+            "level": "DEBUG",
+            "filename": "./log/event/Event.log",
+            "category": "Event",
+            "pattern": "[%D %T] %M",
+            "maxsize": "80M",
+            "maxlines": "30K"
+        },
+        {
+            "enable": true,
+            "level": "TRACE",
+            "filename": "./log/message/Trx.log",
+            "category": "Message",
+            "pattern": "%M",
+            "rotate": true,
+            "maxsize": "80M",
+            "maxlines": "30K",
+            "daily": true,
+            "sanitize": true
+        },
+        {
+            "enable": true,
+            "level": "TRACE",
+            "filename": "./log/nmm/Nmm.log",
+            "category": "NMM",
+            "pattern": "%M",
+            "rotate": true,
+            "maxsize": "80M",
+            "maxlines": "30K",
+            "daily": true,
+            "sanitize": true
+        },
+        {
+            "enable": true,
+            "level": "ERROR",
+            "filename": "./log/error/Error.log",
+            "category": "Error",
+            "pattern": "[%D %T] %M",
+            "rotate": true,
+            "maxsize": "80M",
+            "maxlines": "30K",
+            "daily": true,
+            "sanitize": true
+        },
+        {
+            "enable": true,
+            "level": "CRITICAL",
+            "filename": "./log/event/Event.log",
+            "category": "Critical",
+            "pattern": "[%D %T] [%C] [%L] %M",
+            "maxsize": "80M",
+            "maxlines": "30K"
+        }
+    ]
+}
